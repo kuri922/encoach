@@ -1,3 +1,24 @@
+/* ヘッダー */
+.encoach-header-container {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+
+}
+
+.encoach-header-search-input {
+  border: solid 1px #e5e5e5;
+
+
+
+}
+
+.encoach-header-search-button {
+  background-color: #5cabda;
+}
+
+
+
+/* フォント */
 @font-face {
   font-family: YuGo;
   src: local(YuGo-Medium),
@@ -62,7 +83,7 @@ big {
 
 body {
   font-family: YuGo;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
@@ -91,6 +112,7 @@ label {
   color: #191919;
 }
 
+/* ログイン */
 .encoach-login-input {
   border-radius: 2px;
   border: solid 1px #b2b2b2;

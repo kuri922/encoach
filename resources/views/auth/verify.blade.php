@@ -20,7 +20,7 @@
                 メール本文内のURLをクリックすると本会員登録が完了となります。
             </p>
             <div class="text-center">
-                <a href="/" class="btn encoach-submit-button w-50 text-white">トップページへ</a>
+                <a href="/home" class="btn encoach-submit-button w-50 text-white">トップページへ</a>
             </div>
         </div>
     </div>
