@@ -25,6 +25,18 @@ p .main-section {
   font-size: 10px;
 }
 
+/* 気になるボタン */
+
+.encoach-favorite-button {
+  border-radius: 2px;
+  border: solid 1px #0fbe9f;
+  background-color: #ffffff;
+}
+
+.text-favorite {
+  color: #0fbe9f;
+}
+
 /* フォント */
 @font-face {
   font-family: YuGo;

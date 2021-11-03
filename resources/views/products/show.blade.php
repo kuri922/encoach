@@ -35,14 +35,24 @@
                             カートに追加
                         </button>
                     </div>
+
                     <div class="col-5">
-                        <a href="/products/{{ $product->id }}/favorite" class="btn encoach-favorite-button text-dark w-100">
-                            <i class="fa fa-heart"></i>
-                            お気に入り
-                        </a>
+                            @if($product -> isFavoritedBy(Auth :: user( )))
+                            <a href = "/products/{{ $product -> id }}/favorite" class="btn encoach-favorite-button text-favorite w-90">
+                                <i class ="fa fa-heart"></i>
+                                気になる解除
+                            </a>
+                            @else
+                            <a href ="/products/{{ $product -> id }}/favorite" class="btn encoach-favorite-button text-favorite w-100">
+                                <i class="fa fa-heart"></i>
+                            気になる
+                            </a>
+                            @endif
+
+                        
+
                     </div>
                 </div>
-
             </form>
             @endauth
         </div>

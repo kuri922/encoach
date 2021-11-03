@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\models\Product;
 use App\models\Category;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 
@@ -19,6 +20,22 @@ class ProductController extends Controller
             $products = Product :: all( );
 
             return view('products.index' , compact('products'));
+    }
+
+//     気になる実装
+
+    public function favorite(Product $product) {
+            $user = Auth :: user( );
+
+            if($user -> hasFavorited($product)) {
+                    $user -> unfavorite($product);
+
+            } else {
+                    $user -> favorite($product);
+             }
+
+             return redirect( ) -> route('products.show' , $product);
+
     }
 
     /**
