@@ -1,7 +1,9 @@
 <nav class="navbar navbar-expand-md navbar-light shadow-sm encoach-header-container">
     <a class="navbar-brand" href="{{ url('/home') }}">
+    
         {{ config('app.name', 'Laravel') }}
     </a>
+    
 
     <!-- 検索欄 -->
     <form class="form-inline">

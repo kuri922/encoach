@@ -37,6 +37,11 @@ p .main-section {
   color: #0fbe9f;
 }
 
+img .icons {
+  width: 2px;
+  height: 2px;
+}
+
 /* フォント */
 @font-face {
   font-family: YuGo;
