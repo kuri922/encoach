@@ -17,6 +17,14 @@
 background-color: #cae0ec;
 }
 
+p .main-section {
+  margin-top: 40px;
+}
+
+.deta {
+  font-size: 10px;
+}
+
 /* フォント */
 @font-face {
   font-family: YuGo;
@@ -68,6 +76,10 @@ h3 {
   font-style: normal;
   line-height: normal;
   letter-spacing: 0.04px;
+}
+
+p .h3 {
+  text-align: justify;
 }
 
 big {
