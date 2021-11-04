@@ -1,6 +1,5 @@
-<nav class="navbar navbar-expand-md navbar-light shadow-sm encoach-header-container">
+<nav class="navbar navbar-expand-md navbar-light shadow-sm pl-5 encoach-header-container">
     <a class="navbar-brand" href="{{ url('/home') }}">
-    
         {{ config('app.name', 'Laravel') }}
     </a>
     
@@ -26,21 +25,16 @@
             @auth
            
             <li class="nav-item mr-5">
-                <a class="nav-link" href="{{ route('login') }}">気になる</a>
+                <a class="nav-link" href="{{ route('mypage.favorite') }}"><i class="far fa-heart"></i></a>
             </li>
             <li class="nav-item mr-5">
-                <a class="nav-link" href="{{ route('login') }}">申し込み</a>
+                <a class="nav-link" href="{{ route('login') }}"><i class="fas fa-shopping-cart"></i></a>
             </li>
-            
-
-            <li class="nav-item mr-5 mt-2">
-                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    ログアウト
+       
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="{{ route('mypage') }}">
+                    <i class="fas fa-user mr-1"></i><label>マイページ</label>
                 </a>
-
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" >
-                    @csrf
-                </form>
             </li>
             @endauth
         </ul>

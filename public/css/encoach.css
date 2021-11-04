@@ -12,6 +12,27 @@
  color: #2384b8;
 }
 
+.navbar-brand {
+  font-size: 30px;
+}
+
+/* サイドバー */
+
+.encoach-sidebar-category-label {
+  width: 156px;
+  height: 20px;
+  font-family: YuGo;
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #191919;
+  text-align: justify;
+}
+
+
 /* フッター */
 .footer-container {
 background-color: #cae0ec;
@@ -145,6 +166,12 @@ label {
   border-radius: 2px;
   border: solid 1px #b2b2b2;
   background-color: #ffffff;
+}
+
+/* 気になる */
+.encoach-favorite-add-cart {
+  border-radius: 2px;
+  background-color: #0fbe9f;
 }
 
 .encoach-check-label {
