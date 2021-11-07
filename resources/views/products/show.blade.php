@@ -19,15 +19,11 @@
             </div>
 
             @auth
-            <form method="POST" class="m-3 align-items-end">
+            <form method="POST"　action="{{route('carts.store')}}" class="m-3 align-items-end">
                 {{ csrf_field() }}
                 <input type="hidden" name="id" value="{{$product->id}}">
                 <input type="hidden" name="name" value="{{$product->name}}">
                 <input type="hidden" name="price" value="{{$product->price}}">
-             
-                    
-              
-                <input type="hidden" name="weight" value="0">
                 <div class="row">
                     <div class="col-7">
                         <button type="submit" class="btn encoach-submit-button w-100">

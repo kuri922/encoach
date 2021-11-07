@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="container m-3">
     @foreach ($major_category_names as $major_category_name)
     
         <h2>{{ $major_category_name }}</h2>

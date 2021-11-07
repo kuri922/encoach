@@ -20,7 +20,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center ">
                     <a href="{{route('mypage.edit')}}">
                         <i class="fas fa-chevron-right fa-2x"></i>
                     </a>
@@ -30,13 +30,13 @@
 
         <hr>
 
-        <div class="container">
-            <div class="d-flex justify-content-between">
+        <div class="containe">
+            <div class="d-flex justify-content-between ps-0">
                 <div class="row">
                     <div class="col-2 d-flex align-items-center">
                         <i class="fas fa-map-marked fa-3x"></i>
                     </div>
-                    <div class="col-9 d-flex align-items-center ml-3 mt-3">
+                    <div class="col-9 d-flex align-items-center ml-4 mt-3">
                         <div class="d-flex flex-column">
                             <label for="user-name">詳細情報変更</label>
                             <p>登録住所等の変更</p>
@@ -73,6 +73,7 @@
                 </div>
             </div>
         </div>
+    <hr>
 
         <div class="container">
             <div class="d-flex justify-content-between">
@@ -80,7 +81,7 @@
                     <div class="col-2 d-flex align-items-center">
                         <i class="fas fa-sign-out-alt fa-3x"></i>
                     </div>
-                    <div class="col-9 d-flex align-items-center ml-2 mt-3">
+                    <div class="col-9 d-flex align-items-center ml-3 mt-3">
                         <div class="d-flex flex-column">
                             <label for="user-name">ログアウト</label>
                             <p>ログアウトします</p>

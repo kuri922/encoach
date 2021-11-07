@@ -6,13 +6,13 @@
         @component('components.sidebar', ['categories' => $categories, 'major_category_names' => $major_category_names])
         @endcomponent
     </div>
-    <div class="col-9">
+    <div class="col-8 m-3">
         <h1>おすすめ商品</h1>
        
 
         <h1>人気記事</h1>
         <div class="row">
-            <div class="col-2 border border-secondary ml-3">
+            <div class="col-md-2 border border-secondary ml-2">
                 <a href="#">
                     <img src="{{ asset('img/bridge.png')}}" class="img-thumbnail">
                 </a>
@@ -24,7 +24,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-2 border border-secondary ml-3">
+            <div class="col-md-2 border border-secondary ml-2">
                 <a href="#">
                     <img src="{{ asset('img/phone.png')}}" class="img-thumbnail">
                 </a>
@@ -36,7 +36,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-2 border border-secondary ml-3">
+            <div class="col-md-2 border border-secondary ml-2">
                 <a href="#">
                     <img src="{{ asset('img/education.png')}}" class="img-thumbnail">
                 </a>

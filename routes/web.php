@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// 申し込みカート内
+Route::get('users/carts', 'CartController@index')->name('carts.index');
+Route::post('user/carts', 'CartController@store')->name('carts.store');
+
+
 // 会員情報変更
 Route::get('users/mypage', 'UserController@mypage')->name('mypage');
  Route::get('users/mypage/edit', 'UserController@edit')->name('mypage.edit');
