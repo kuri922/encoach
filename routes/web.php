@@ -15,9 +15,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// 問い合わせ
+Route::get('products/contacts/create', 'ContactsController@create')->name('contact');
+
+// 確認ページ
+Route::post('products/contacts/contact/show', 'ContactsController@show');
+
+// DB挿入、メール送信
+Route::post('/process', 'ContactsController@process')->name('process');
+
+// 完了ページ
+Route::get('/store', 'ContactsController@store')->name('store');
+
 // 申し込みカート内
 Route::get('users/carts', 'CartController@index')->name('carts.index');
-Route::post('user/carts', 'CartController@store')->name('carts.store');
+Route::post('users/carts', 'CartController@store')->name('carts.store');
+Route::delete('users/carts', 'CartController@destroy')->name('carts.destroy');
 
 
 // 会員情報変更

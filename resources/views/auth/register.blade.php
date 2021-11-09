@@ -15,7 +15,7 @@
                     <label for="name" class="col-md-5 col-form-label text-md-left">氏名<span class="ml-1 encoach-require-input-label"><span class="encoach-require-input-label-text">必須</span></span></label>
 
                     <div class="col-md-7">
-                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror encoach-login-input" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="侍 太郎">
+                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror encoach-login-input" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="山田 太郎">
 
                         @error('name')
                         <span class="invalid-feedback" role="alert">

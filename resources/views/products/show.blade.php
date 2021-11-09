@@ -24,6 +24,7 @@
                 <input type="hidden" name="id" value="{{$product->id}}">
                 <input type="hidden" name="name" value="{{$product->name}}">
                 <input type="hidden" name="price" value="{{$product->price}}">
+
                 <div class="row">
                     <div class="col-7">
                         <button type="submit" class="btn encoach-submit-button w-100">
@@ -32,6 +33,16 @@
                         </button>
                     </div>
 
+                <div class="row">
+                    <div class="col-7">
+                        <button type="submit" class="btn encoach-submit-button w-100">
+                        <a class="nav-link" href="contacts/create"><label>問い合わせ</label>
+                    </button>
+                    </a>
+                           
+                    </div>
+
+               
                     <div class="col-5">
                             @if($product -> isFavoritedBy(Auth :: user( )))
                             <a href = "/products/{{ $product -> id }}/favorite" class="btn encoach-favorite-button text-favorite w-90">

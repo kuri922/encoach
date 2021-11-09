@@ -19,17 +19,17 @@
 /* サイドバー */
 
 .encoach-sidebar-category-label {
-  width: 156px;
+ width: 100vh;
   height: 20px;
   font-family: YuGo;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 300;
   font-stretch: normal;
   font-style: normal;
-  line-height: normal;
+  line-height: 1.5;
   letter-spacing: normal;
   color: #191919;
-  text-align: justify;
+  text-align: justify;  
 }
 
 
@@ -166,6 +166,7 @@ label {
   border-radius: 2px;
   border: solid 1px #b2b2b2;
   background-color: #ffffff;
+  text-align: center;
 }
 
 /* 気になる */
@@ -203,7 +204,7 @@ label {
 
 .encoach-submit-button {
   font-family: YuGo;
-  font-size: 14px;
+  font-size: 25px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -216,11 +217,112 @@ label {
 
 .encoach-login-text {
   font-family: YuGo;
-  font-size: 14px;
+  font-size: 25px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color:#0fbe9f;
+  color: #b2b2b2;
+  color: #ffffff;
+  background-color: #0fbe9f;
+  text-align: center;
+}
+
+.encoach-login-login {
+  font-family: YuGo;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+
+
+}
+
+
+
+
+.inner {
+  padding: 70px 50px;
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+a .login {
+  font-size: 25px;
+
+}
+
+section .btn {
+  align-items: center;
+ margin-top: 200px;
+ position: absolute;
+ top: 50%;
+ left: 45%; 
+}
+
+.topimage {
+  background-image: url(../img/toppage.jpg);
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-color:rgba(99, 78, 75, 0.8);
+  background-blend-mode:lighten;
+  
+}
+
+.toppage ::before {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top:0;
+  right: 0;
+  border: 0;
+  left: 0;
+  content: ' ';
+}
+
+section h1  {
+  font-family: YuGo;
+  text-align: center;
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.line {
+  background-color: #4a4a4a;
+  width: 55px;
+  height: 1px;
+  margin: 20px auto 60px;
+}
+
+main {
+  line-height: 4;
+}
+
+main h3 {
+  padding:auto;
+  align-items: center;
+}
+
+main h2 {
+  margin-top: -20px;
+}
+ footer h2 {
+  text-align: center;
+  background-color: #cae0ec;
 }

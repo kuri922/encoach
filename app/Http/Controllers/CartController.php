@@ -20,12 +20,22 @@ class CartController extends Controller
     {
         $cart = Cart :: instance(Auth :: user( ) ->id) -> content( );
 
+        $cart = Cart::instance(Auth::user()->id)->content();
+
+        $total = 0;
 
         foreach ($cart as $c) {
-            $total = $c -> price;
-
-            return view('carts.index', compact('cart', 'total'));
+            $total += $c->qty * $c->price;
         }
+
+        return view('carts.index', compact('cart', 'total'));
+
+
+        // foreach ($cart as $c) {
+        //     $total = $c -> price;
+
+        //     return view('carts.index', compact('cart', 'total'));
+        // }
     }
 
     /**
@@ -52,7 +62,7 @@ class CartController extends Controller
                 'name' => $request->name, 
                 'qty' => '1',
                 'price' => $request->price, 
-                'weight' => '1',
+                'weight' =>'1'
             ] 
             );
 
@@ -111,9 +121,18 @@ class CartController extends Controller
     public function destroy(Request $require)
     {
         
+        $user_shoppingcarts = DB::table('shoppingcart')->where('instance', Auth::user()->id)->get();
+
+        $count = $user_shoppingcarts->count();
+
+        $count += 1;
+        Cart::instance(Auth::user()->id)->store($count);
+
+        DB::table('shoppingcart')->where('instance', Auth::user()->id)->where('number', null)->update(['number' => $count, 'buy_flag' => true]);
+
         Cart::instance(Auth::user()->id)->destroy();
+
         return redirect()->route('carts.index');
-        // $user_shopingcarts = DB :: table('shoppingcart') -> where('instance' , Auth :: user( ) -> id) -> get( );
 
 
     }

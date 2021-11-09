@@ -8,6 +8,8 @@
         <div class="row">
             <div class="offset-8 col-4">
                 <div class="row">
+                    <div class="col-6">
+                        <h2>数量</h2>
                     </div>
                     <div class="col-6">
                         <h2>合計</h2>
@@ -20,17 +22,19 @@
 
         <div class="row">
             @foreach ($cart as $product)
-            <div class="col-md-2 mt-2">
+            <div class="col-md-2 mt-4">
                 <a href="{{route('products.show', $product->id)}}">
-                    <img src="{{ asset('img/dummy.png')}}" class="img-fuild w-100">
+                    <img src="{{ asset('img/dummy.jpg')}}" class="img-fuild w-100">
                 </a>
             </div>
             <div class="col-md-6 mt-4">
-                <h3 class="mt-4">{{$product -> name}}</h3>
+                <h3 class="mt-4">{{$product->name}}</h3>
             </div>
-            
             <div class="col-md-2">
-                <h3 class="w-100 mt-4">¥{{product -> price}}</h3>
+                <h3 class="w-100 mt-4">{{$product->qty}}</h3>
+            </div>
+            <div class="col-md-2">
+                <h3 class="w-100 mt-4">￥{{$product->qty * $product->price}}</h3>
             </div>
             @endforeach            
         </div>
@@ -50,6 +54,18 @@
                 </div>
             </div>
         </div>
+        <form method="post" action="{{route('carts.destroy')}}" class="d-flex justify-content-end mt-3">
+            {{ csrf_field() }}
+            <input type="hidden" name="_method" value="DELETE">
+            <a href="/" class="btn samazon-favorite-button border-dark text-dark mr-3">
+                買い物を続ける
+            </a>
+            @if ($total > 0)
+            <button type="submit" class="btn encoach-submit-button">購入を確定する</button>
+            @else
+            <button type="submit" class="btn samazon-submit-button disabled">購入を確定する</button>
+            @endif
+        </form>
     </div>
 </div>
 @endsection
