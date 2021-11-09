@@ -18,7 +18,7 @@ class ContactsController extends Controller
     }
 
     public function show(Request $request) {
-        $inputs = $request->all();
+        $inputs = $request->all( );
         return view('contacts.show' , compact('inputs'));
     }
 

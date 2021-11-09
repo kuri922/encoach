@@ -16,13 +16,13 @@ Route::get('/', function () {
 });
 
 // 問い合わせ
-Route::get('products/contacts/create', 'ContactsController@create')->name('contact');
+Route::get('products/contacts/create', 'ContactsController@create')->name('create');
 
 // 確認ページ
 Route::post('products/contacts/contact/show', 'ContactsController@show');
 
-// DB挿入、メール送信
-Route::post('/process', 'ContactsController@process')->name('process');
+// DB挿入
+Route::post('/store', 'ContactsController@store')->name('store');
 
 // 完了ページ
 Route::get('/store', 'ContactsController@store')->name('store');
