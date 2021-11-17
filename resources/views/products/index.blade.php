@@ -9,23 +9,24 @@
                 @endcomponent
         </div>
 
-    <div class="col-8">
+
         <div class ="container">
+        <div class="col-5">
                 @if($category !== null)
                     <a href ="home">トップ</a> > <a href ="#">{{ $category ->major_category_name}}</a> > {{ $category -> name }}
                     <h1>{{ $category -> name }}のサービス一覧{{$total_count}}件</h1>
                 @endif
         </div>
 
-        <div class="container mt-4">
-            <div class="d-flex justify-content-center">
+        <div class="container mt-4 pe-5">
+            <div class="d-flex  justify-content-center">
                 @foreach($products as $product)
-                <div class="col-4 border border-secondary ml-4 mb-4">
+                <div class="col-3 border border-secondary ml-4 mb-4">
                     <a href="{{route('products.show', $product)}}">
                         <img src="{{ asset('img/dummy.jpg')}}" class="img-thumbnail">
                     </a>
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-8">
                             <p class="encoach-product-label mt-3 font-weight-bold ">
                                 {{$product->name}}<br>
                                 <label>￥{{$product->price}}</label>
@@ -39,4 +40,5 @@
         {{ $products->appends(request()->query())->links() }}
     </div>
 </div>
+
 @endsection

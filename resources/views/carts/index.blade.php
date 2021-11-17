@@ -57,13 +57,10 @@
         <form method="post" action="{{route('carts.destroy')}}" class="d-flex justify-content-end mt-3">
             {{ csrf_field() }}
             <input type="hidden" name="_method" value="DELETE">
-            <a href="/" class="btn samazon-favorite-button border-dark text-dark mr-3">
-                買い物を続ける
-            </a>
             @if ($total > 0)
             <button type="submit" class="btn encoach-submit-button">購入を確定する</button>
             @else
-            <button type="submit" class="btn samazon-submit-button disabled">購入を確定する</button>
+            <button type="submit" class="btn encoach-submit-button disabled">購入を確定する</button>
             @endif
         </form>
     </div>

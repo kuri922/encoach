@@ -20,14 +20,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-2 d-flex align-items-center justify-content-end">
-                <a href="/products/{{ $fav->id }}/favorite" class="encoach-favorite-item-delete">
-                    削除
-                </a>
-            </div>
-            <div class="col-md-2 d-flex align-items-center justify-content-end">
-                <button type="submit" class="btn encoach-favorite-add-cart text-white w-100">申し込む</button>
-            </div>
+            <form method="POST"　action="{{route('carts.store')}}" class="m-3 align-items-end">
+                {{ csrf_field() }}
+            <div class="row">
+                    <div class="col-10">
+                    
+                    </div>
+                </div>
+            </form>
             @endforeach
         </div>
 

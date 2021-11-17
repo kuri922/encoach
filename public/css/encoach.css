@@ -19,18 +19,11 @@
 /* サイドバー */
 
 .encoach-sidebar-category-label {
- width: 100vh;
-  height: 20px;
+  width: 100vh;
   font-family: YuGo;
-  font-size: 13px;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.5;
-  letter-spacing: normal;
-  color: #191919;
-  text-align: justify;  
+  color: #191919; 
 }
+
 
 
 /* フッター */
@@ -50,13 +43,14 @@ p .main-section {
 
 .encoach-favorite-button {
   border-radius: 2px;
-  border: solid 1px #0fbe9f;
-  background-color: #ffffff;
 }
 
-.text-favorite {
-  color: #0fbe9f;
+/* 退会機能 */
+.encoach-delete-submit-button {
+  border-radius: 2px;
+  background-color: #d94b0e;
 }
+
 
 img .icons {
   width: 2px;
@@ -117,7 +111,7 @@ h3 {
 }
 
 p .h3 {
-  text-align: justify;
+  text-align: justify; 
 }
 
 big {
@@ -156,7 +150,6 @@ label {
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: normal;
   letter-spacing: normal;
   color: #191919;
 }
@@ -204,7 +197,7 @@ label {
 
 .encoach-submit-button {
   font-family: YuGo;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -213,6 +206,13 @@ label {
   color: #b2b2b2;
   color: #ffffff;
   background-color: #0fbe9f;
+}
+
+.encoach-favorite-button  {
+  color: #b2b2b2;
+  color: #ffffff;
+  background-color: #0fbe9f;
+
 }
 
 .encoach-login-text {
@@ -325,4 +325,18 @@ main h2 {
  footer h2 {
   text-align: center;
   background-color: #cae0ec;
+}
+
+@media screen and (min-width:768px){
+  .flexbox {
+    display: block;
+}
+.flexbox .box1 {
+    width: 100%;
+    margin: 0 auto;
+}
+.flexbox .box2 {
+    width: 100%;
+    margin: 0 auto;
+}
 }

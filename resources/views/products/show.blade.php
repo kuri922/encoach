@@ -26,21 +26,25 @@
                 <input type="hidden" name="price" value="{{$product->price}}">
 
                 <div class="row">
-                    <div class="col-7">
+                    <div class="col-10">
                         <button type="submit" class="btn encoach-submit-button w-100">
                             <i class="fas fa-shopping-cart"></i>
                             カートに追加
                         </button>
                     </div>
-
+                </div>
                 <div class="row">
-                    <div class="col-7">
-                        <button type="submit" class="btn encoach-submit-button w-100">
-                        <a class="nav-link" href="contacts/create"><label>問い合わせ</label>
-                    </button>
-                    </a>
+                    <div class="col-5">
+                    <a href ="contacts/create" class="btn encoach-favorite-button text-favorite w-100">
+                            問い合わせ
+                            </a>
+                        <!-- <button type="submit" class="btn encoach-submit-button w-100 h-50">
+                            <a class="nav-link" href="contacts/create">問い合わせ
+                        </button>
+                            </a> -->
                            
                     </div>
+       
 
                
                     <div class="col-5">

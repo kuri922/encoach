@@ -19,11 +19,11 @@ class ProductController extends Controller
     public function index(Request $request)
     {
             if($request -> category !== null) {
-                    $products = Product :: where('category_id' , $request -> category) -> paginate(10);
+                    $products = Product :: where('category_id' , $request -> category) -> paginate(6);
                     $total_count = Product :: where('category_id' , $request -> category) -> count( );
                     $category = Category :: find($request -> category);
             }   else {
-                    $products = Product :: paginate(15);
+                    $products = Product :: paginate(6);
                     $total_count = "";
                     $category = null;
             }
@@ -50,37 +50,37 @@ class ProductController extends Controller
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-            $categories = Category :: all( );
-            return view('products.create' , compact('categories'));
-    }
+//     /**
+//      * Show the form for creating a new resource.
+//      *
+//      * @return \Illuminate\Http\Response
+//      */
+//     public function create()
+//     {
+//             $categories = Category :: all( );
+//             return view('products.create' , compact('categories'));
+//     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-            $product = new Product ( );
-            $product -> name = $request  -> input('name');
-            $product -> price = $request  -> input('price');
-            $product -> description = $request  -> input('description');
-            $product -> category_id = $request  -> input('category_id');
+//     /**
+//      * Store a newly created resource in storage.
+//      *
+//      * @param  \Illuminate\Http\Request  $request
+//      * @return \Illuminate\Http\Response
+//      */
+//     public function store(Request $request)
+//     {
+//             $product = new Product ( );
+//             $product -> name = $request  -> input('name');
+//             $product -> price = $request  -> input('price');
+//             $product -> description = $request  -> input('description');
+//             $product -> category_id = $request  -> input('category_id');
 
 
-            $product -> save( );
+//             $product -> save( );
 
-            return redirect( ) -> route('products.show' , ['id' => $product -> id]);
+//             return redirect( ) -> route('products.show' , ['id' => $product -> id]);
 
-    }
+//     }
 
     /**
      * Display the specified resource.
@@ -100,45 +100,45 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
-    {
+//     public function edit(Product $product)
+//     {
 
-            $categories = Category :: all( );
-            return view('products.edit' , compact('product' , 'categories'));
+//             $categories = Category :: all( );
+//             return view('products.edit' , compact('product' , 'categories'));
 
-    }
+//     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Product $product)
-    {
+//     /**
+//      * Update the specified resource in storage.
+//      *
+//      * @param  \Illuminate\Http\Request  $request
+//      * @param  \App\Product  $product
+//      * @return \Illuminate\Http\Response
+//      */
+//     public function update(Request $request, Product $product)
+//     {
         
-                $product -> name = $request  -> input('name');
-                $product -> price = $request  -> input('price');
-                $product -> description = $request  -> input('description');
-                $product -> category_id = $request  -> input('category_id');
+//                 $product -> name = $request  -> input('name');
+//                 $product -> price = $request  -> input('price');
+//                 $product -> description = $request  -> input('description');
+//                 $product -> category_id = $request  -> input('category_id');
 
-                $product -> update( );
+//                 $product -> update( );
 
-                return redirect( ) -> route('products.show' , ['id' => $product -> id]);
+//                 return redirect( ) -> route('products.show' , ['id' => $product -> id]);
 
-    }
+//     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Product  $product
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Product $product)
-    {
-                $product -> delete( );
-                return redirect( ) -> route('products.index');
+//     /**
+//      * Remove the specified resource from storage.
+//      *
+//      * @param  \App\Product  $product
+//      * @return \Illuminate\Http\Response
+//      */
+//     public function destroy(Product $product)
+//     {
+//                 $product -> delete( );
+//                 return redirect( ) -> route('products.index');
 
-    }
-}
+//     }
+ }

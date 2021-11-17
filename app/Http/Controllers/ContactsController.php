@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Contacts;
+use App\models\Contact;
 use Illuminate\Http\Request;
+
 
 class ContactsController extends Controller
 {
@@ -45,33 +46,15 @@ class ContactsController extends Controller
 
         if($action === 'submit') {
 
-            // DBにデータを保存
-            $contact = new Contact();
+            $contact = new Contact( );
             $contact->fill($input);
             $contact->save();
 
             return redirect()->route('complete');
         } else {
-            return redirect()->route('contact')->withInput($input);
+            return redirect()->route('create')->withInput($input);
         }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Contacts  $contacts
-     * @return \Illuminate\Http\Response
-     */
-    
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Contacts  $contacts
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Contacts $contacts)
-    {
-        //
-    }
 }

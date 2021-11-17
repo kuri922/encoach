@@ -22,10 +22,10 @@ Route::get('products/contacts/create', 'ContactsController@create')->name('creat
 Route::post('products/contacts/contact/show', 'ContactsController@show');
 
 // DB挿入
-Route::post('/store', 'ContactsController@store')->name('store');
+Route::post('products/contacts/contact/contact/store', 'ContactsController@store')->name('store');
 
 // 完了ページ
-Route::get('/store', 'ContactsController@store')->name('store');
+Route::get('/store', 'ContactsController@store')->name('complete');
 
 // 申し込みカート内
 Route::get('users/carts', 'CartController@index')->name('carts.index');
@@ -38,6 +38,9 @@ Route::get('users/mypage', 'UserController@mypage')->name('mypage');
  Route::get('users/mypage/edit', 'UserController@edit')->name('mypage.edit');
  Route::get('users/mypage/address/edit', 'UserController@edit_address')->name('mypage.edit_address');
  Route::put('users/mypage', 'UserController@update')->name('mypage.update');
+ Route::delete('users/mypage/delete', 'UserController@destroy')->name('mypage.destroy');
+ Route::get('users/mypage/cart_history', 'UserController@cart_history_index')->name('mypage.cart_history');
+ Route::get('users/mypage/cart_history/{num}', 'UserController@cart_history_show')->name('mypage.cart_history_show');
 
 //  気になる
 Route::get('users/mypage/favorite' , 'UserController@favorite')-> name('mypage.favorite');
