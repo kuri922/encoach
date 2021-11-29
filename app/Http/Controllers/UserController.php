@@ -46,17 +46,11 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         $user = Auth :: user( );
-
         $user -> name = $request -> input('name') ? $request -> input('name') : $user -> name;
-
         $user -> email = $request -> input('email') ? $request -> input('email') : $user -> email;
-
         $user -> postal_code = $request -> input('postal_code') ? $request -> input('posta_code') : $user -> postal_code;
-
         $user -> address = $request -> input('address') ? $request -> input('address') : $user -> address;
-
         $user -> phone = $request -> input('phone') ? $request -> input('phone') : $user -> phone;
-
         $user->update();
 
         return redirect( ) -> route('mypage');
@@ -75,10 +69,8 @@ class UserController extends Controller
         $user = Auth :: user( );
 
         if ($request -> input('password') == $request -> input('password_confirmation')) {
-
             $user -> password = bcrypt($request -> input('password'));
             $user -> update( );
-
         } else {
             return redirect( ) -> route('mypage.edit_password');
         }
@@ -88,15 +80,12 @@ class UserController extends Controller
 
     public function favorite ( ) {
         $user = Auth :: user( );
-
         $favorites = $user -> favorites(Product :: class) -> get( );
-
         return view('users.favorite' , compact('favorites'));
     }
 
     public function destroy(Request $request) {
         $user = Auth :: user( );
-
         if ($user -> deleted_flag) {
             $user -> deleted_flag = false;
         }else {
@@ -124,17 +113,11 @@ class UserController extends Controller
    {
        $num = $request->num;
        $user_id = Auth::user()->id;
-
        $cart_info = DB::table('shoppingcart')->where('instance', $user_id)->where('number', $num)->get()->first();
-
        Cart::instance($user_id)->restore($num);
-
        $cart_contents = Cart::content();
-
        Cart::instance($user_id)->store($num);
-
        Cart::destroy();
-
        DB::table('shoppingcart')->where('instance', $user_id)
                  ->where('number', null)
                  ->update(

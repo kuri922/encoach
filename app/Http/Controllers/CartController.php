@@ -164,9 +164,9 @@ class CartController extends Controller
             'code' => substr(str_shuffle('1234567890abcdefghijklmnopqrstuvwxyz'), 0, 10),
              'number' => $number, 
              'price_total' => $price_total,
-              'qty' => $qty_total,
-               'buy_flag' => true, 
-                'updated_at' => date("Y/m/d H:i:s")
+            'qty' => $qty_total,
+            'buy_flag' => true, 
+            'updated_at' => date("Y/m/d H:i:s")
                                     ]
                                 );
 
