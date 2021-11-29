@@ -19,11 +19,15 @@
         </div>
 
         <div class="container mt-4 pe-5">
-            <div class="d-flex  justify-content-center">
+            <div class="d-flex">
                 @foreach($products as $product)
                 <div class="col-3 border border-secondary ml-4 mb-4">
                     <a href="{{route('products.show', $product)}}">
-                        <img src="{{ asset('img/dummy.jpg')}}" class="img-thumbnail">
+                        @if ($product -> image !== "")
+                        <img src="{{$product['image']}}" class="w-100 img-fluid">
+                        @else
+                        <img src="{{asset('img/dummy.jpg')}}" class="img-thumbnail">
+                        @endif
                     </a>
                     <div class="row">
                         <div class="col-8">

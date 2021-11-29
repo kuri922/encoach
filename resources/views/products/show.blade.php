@@ -5,7 +5,11 @@
 <div class="d-flex justify-content-center text-justify">
     <div class="row w-75">
         <div class="col-5 offset-1">
+            @if ($product->image !== null)
+            <img src="{{$product['image']}}" class="img-fluid">
+            @else
             <img src="{{ asset('img/dummy.jpg')}}" class="w-100 img-fuild">
+            @endif
         </div>
         <div class="col">
             <div class="d-flex flex-column mb-5">
@@ -75,6 +79,9 @@
                     【サービス内容】<br>
                     {{$product->description}}
                 </p>
+                <a href="/products">商品一覧に戻る</a>
+
+    
                 <hr class="w-100">
             <h3 class="float-left mt-5">カスタマーレビュー</h3>
         </div>

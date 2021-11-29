@@ -60,7 +60,7 @@
             @if ($total > 0)
             <button type="submit" class="btn encoach-submit-button">購入を確定する</button>
             @else
-            <button type="submit" class="btn encoach-submit-button disabled">購入を確定する</button>
+            <div class="btn encoach-submit-button disabled" data-toggle="modal" data-target="#buy-confirm-modal">購入を確定する</div>
             @endif
         </form>
     </div>
